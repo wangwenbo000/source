@@ -1,0 +1,58 @@
+$global_bg:#0b0b0b;
+$global_border:#000;
+$global_gold:#d6b264;
+$global_border_width:22px;
+
+$global_font_color:#c4c4c4;
+
+@include font-face("din",
+  font-files(
+  'DINPro-Light.otf'
+  )
+);
+
+html{background: $global_bg;}
+a{text-decoration: none;}
+.topMenu{
+  color: $global_font_color;
+  display: block;
+  position: fixed;
+  top: 40px;
+  z-index: 1000;
+  font-size: 14px;
+}
+.border{
+  background: $global_border;
+  position: fixed;
+  z-index: 1000;
+}
+.b_left, .b_right{
+  width: $global_border_width;
+  height: 100%;
+}
+.b_top, .b_bottom{
+  width: 100%;
+  height: $global_border_width;
+}
+.b_top{
+  top: 0;
+}
+.b_bottom{
+  bottom:0;
+  color: $global_font_color;
+  text-align: center;
+  line-height: $global_border_width;
+  font-size: 8px;
+}
+.b_left{
+  left: 0;
+}
+.b_right{
+  right: 0;
+}
+#pp-nav{
+  z-index: 1000;
+}
+#pp-nav.right{
+  right: -2px;
+}

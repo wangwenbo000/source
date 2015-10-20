@@ -1,0 +1,39 @@
+<script type="text/javascript" src='http://webapi.amap.com/maps?v=1.3&key=13b39e306c7d25e2e14a6419c0ad2110'></script>
+<link rel="stylesheet" type="text/css" href="http://cache.amap.com/lbs/static/jsDemoStyle20150512.css ">
+<a href="javascript:;" class="topMenu" id="contact"><u>CONTACT</u></a>
+<div class="ctrContactModal">
+    <h2 class="contactModalSV">SOURCE VIDEO</h2>
+    <div id="contactModal">
+
+        <a href="javascript:;" class="close"></a>
+
+        <div id="map"></div>
+        <h2>Contact us<br>联系我们</h2>
+        <span class="emailText">您可以发送邮件联系我们</span>
+
+        <div class="sendMail">
+            <span>wangwenbo000@me.com</span>
+            <a href="javascript:;">发邮件</a>
+        </div>
+
+        <span class="mailText">可以给我们打电话</span>
+
+        <h3>010-6833521</h3>
+
+        <address>北京市朝阳区一个用来测试的地址</address>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var map = new AMap.Map('map', {
+        resizeEnable: true,
+        zoom: 14,
+        center: [116.434865, 40.043123]
+    });
+    map.setMapStyle('light');
+    marker = new AMap.Marker({
+        icon: "http://webapi.amap.com/images/marker_sprite.png",
+        position: [116.434865, 40.043123]
+    });
+    marker.setMap(map);
+</script>

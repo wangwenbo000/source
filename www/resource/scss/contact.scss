@@ -1,0 +1,91 @@
+#contact {
+  right: 50px;
+}
+.ctrContactModal{
+  display: none;
+}
+#contactModal {
+  position: absolute;
+  width: 1000px;
+  height: 520px;
+  background: #fff;
+  left: 50%;
+  top: 50%;
+  margin-left: -500px;
+  margin-top: -260px;
+  z-index: 1000;
+  box-shadow: 0 0 16px #000;
+  .close {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: -80px;
+    background: $global_gold url('../img/close.png') no-repeat center;
+  }
+  #map {
+    width: 58%;
+    height: 100%;
+    background: #ccc;
+  }
+  h2, h3, span, address, .sendMail {
+    position: absolute;
+    left: 60%;
+  }
+
+  h2 {
+    top: 20px;
+    font-size: 40px;
+    font-family: 'din';
+    line-height: 44px;
+  }
+  .emailText {
+    top: 190px;
+    color: $global_font_color;
+  }
+  .sendMail {
+    top: 220px;
+    width: 360px;
+    height: 60px;
+    border: 3px solid #000000;
+    a {
+      width: 120px;
+      height: 60px;
+      float: right;
+      color: #fff;
+      display: block;
+      background: #000000;
+      text-align: center;
+      line-height: 56px;
+    }
+    span {
+      left: 20px;
+      top: 24px;
+    }
+  }
+  .mailText {
+    top: 320px;
+    color: $global_font_color;
+  }
+  h3 {
+    font-family: 'din';
+    top: 350px;
+    font-size: 40px;
+  }
+
+  address {
+    top: 450px;
+  }
+}
+
+.contactModalSV {
+  position: absolute;
+  color: #fff;
+  width: 288px;
+  font-size: 42px;
+  font-family: 'din';
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  margin-left: -144px;
+  margin-top: -296px;
+}

@@ -1,0 +1,40 @@
+<%=include header.html%>
+<body>
+  <%=include border.html%>
+  
+  <%=include follow.html%>
+  <%=include contact.html%>
+  <%=include playvideo.html%>
+  <%=include menu.html%>
+
+  <div id="sourceWeb">
+    <div class="section screen1">
+      <%=include screen_1.html%>
+    </div>
+    <div class="section screen2">
+      <%=include screen_2.html%>
+    </div>
+    <div class="section screen3">
+      <%=include screen_3.html%>
+    </div>
+    <div class="section screen4">
+      <%=include screen_4.html%>
+    </div>
+  </div>
+</body>
+
+<script charset="utf-8">
+$(document).ready(function() {
+
+    $('#sourceWeb').pagepiling({
+      verticalCentered: false,
+      navigation: {
+            'textColor': '#000',
+            'bulletsColor': '#222',
+            'position': 'right',
+            'tooltips': ['source video', 'works', 'videos', 'graphic Design']
+        },
+    });
+});
+</script>
+<%=include footer.html%>

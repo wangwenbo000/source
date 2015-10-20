@@ -1,0 +1,51 @@
+<img src="resource/img/logo.png" alt="" id="logo">
+<img src="resource/img/down.png" alt="" class="down"/>
+<a href="javascript:;" id="idnewsMore">MORE+</a>
+<div class="news-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="resource/img/1.jpg" alt="" /></div>
+    <div class="swiper-slide"><img src="resource/img/2.jpg" alt="" /></div>
+    <div class="swiper-slide"><img src="resource/img/3.jpg" alt="" /></div>
+    <div class="swiper-slide"><img src="resource/img/4.jpg" alt="" /></div>
+  </div>
+</div>
+
+<ul id="news">
+  <li class="news_list">
+    <p>正在做</p>
+    <time>2015/08/28</time>
+    <h2>现在是一篇测试文章</h2>
+  </li>
+  <li class="news_list">
+    <p>正在做</p>
+    <time>2015/08/28</time>
+    <h2>现在是一篇测试文章</h2>
+  </li>
+  <li class="news_list">
+    <p>正在做</p>
+    <time>2015/08/28</time>
+    <h2>现在是一篇测试文章</h2>
+  </li>
+  <li class="news_list">
+    <p>正在做</p>
+    <time>2015/08/28</time>
+    <h2>现在是一篇测试文章</h2>
+  </li>
+</ul>
+
+<script charset="utf-8">
+$(document).ready(function() {
+  var mySwiper = new Swiper('.news-container', {
+    autoplay: 3000,//可选选项，自动滑动
+    effect : 'fade',
+    loop:true,
+    autoplay:3000,
+    speed:1500,
+  });
+  var newsList=$('.news_list');
+  newsList.mouseover(function(){
+    console.log($(this).index());
+    mySwiper.slideTo($(this).index(), 1000, false);
+  });
+});
+</script>

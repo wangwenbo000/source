@@ -1,0 +1,25 @@
+#follow{
+  left: 50px;
+}
+#followBtn{
+  position: absolute;
+  left: 50px;
+  top: 70px;
+  z-index: 1000;
+  li{
+    width: 60px;
+    height: 60px;
+    background: rgba(0,0,0,0.7);
+    margin-left: 1px;
+    cursor: pointer;
+    float: left;
+    text-align: center;
+    img{
+      margin-top: 15px;
+    }
+  }
+  li:hover{
+    background: $global_gold;
+    transition: 2s background ease;
+  }
+}

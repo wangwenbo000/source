@@ -1,0 +1,35 @@
+<div class="video-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="resource/img/video/1.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="resource/img/video/2.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="resource/img/video/3.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="resource/img/video/4.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="resource/img/video/5.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="resource/img/video/6.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="resource/img/video/7.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="resource/img/video/8.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="resource/img/video/1.jpg" alt="" /></div>
+        <div class="swiper-slide"><img src="resource/img/video/2.jpg" alt="" /></div>
+    </div>
+    <div class="swiper-scrollbar"></div>
+</div>
+
+<div id="player">
+  <div class="vMenu"></div>
+  <div class="vPlay"></div>
+  <div class="vTime"></div>
+  <div class="vProgerss"></div>
+  <div class="vFull"></div>
+</div>
+<script>
+    var swiper = new Swiper('.video-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 4.2,
+        slidesPerColumn: 2,
+        paginationClickable: true,
+        spaceBetween: 0,
+        scrollbar:'.swiper-scrollbar',
+        scrollbarHide:false,
+        mousewheelControl : true,
+    });
+</script>
