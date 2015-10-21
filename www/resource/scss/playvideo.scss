@@ -1,4 +1,5 @@
 #playvideo{
+  display: none;
   width: 80%;
   height: 70%;
   position: absolute;
@@ -6,7 +7,7 @@
   top: 50%;
   margin-left: -40%;
   margin-top: -24%;
-  z-index: 1000;
+  z-index: 1001;
 
   background: #fff;
   border: 10px solid $global_border;
@@ -16,6 +17,7 @@
     height: 100%;
     background: url("../img/videocover.jpg") no-repeat;
     background-size: cover;
+    position: relative;
     img{
       position: absolute;
       left: 50%;
@@ -23,8 +25,97 @@
       margin-left: -40px;
       margin-top: -40px;
     }
+    .logoTag{
+      background: url("../img/logoblack.png") no-repeat;
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+      width: 147px;
+      height: 40px;
+    }
     .playIcon{
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      li{
+        width: 60px;
+        height: 60px;
+        background: #d6b264;
+        background-size: 100%;
+        margin-top: 1px;
+      }
+      li:first-child{
+        background: #0b0b0b  url("../img/close.png") no-repeat center;
+      }
+      li:first-child:hover{
+        background: #292929 url("../img/close.png") no-repeat center;
+      }
+      li:hover{
+        background: #c0a05a;
+        cursor: pointer;
+      }
+    }
+  }
+  .clearfix{overflow:auto;_height:1%}
+  .videoInfo, .filmProfile{
+    width: calc(100%-80px*2);
+    border-bottom: 1px solid #b7b7b7;
+    padding: 30px;
+  }
 
+  .videoInfo{
+    .videoYear, .videoTitle, .videoLong{
+      background: url("../img/xiexian.png") no-repeat 80px 6px;
+    }
+    .videoYear{
+      width: 184px;
+      font-family: 'din';
+      font-weight: 400;
+      font-size: 60px;
+      color: $global_gold;
+      float: left;
+    }
+    .videoTitle{
+      width: 100px;
+      float: left;
+      padding: 16px 0 0 20px;
+    }
+    .videoLong{
+      width: 120px;
+      float: left;
+      time{
+        font-size: 30px;
+        font-family: 'din';
+      }
+    }
+    .videoCast{
+      font-size: 12px;
+      width: 40%;
+      line-height: 16px;
+      float: left;
+    }
+  }
+  .filmProfile{
+    p{
+      position: relative;
+      width: 60%;
+      margin: 0 auto;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .stagePhoto{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    .swiper-slide{
+      overflow: hidden;
+      img{
+        //height: 100%;
+        width: 100%;
+      }
     }
   }
 }

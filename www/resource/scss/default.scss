@@ -5,11 +5,7 @@ $global_border_width:22px;
 
 $global_font_color:#c4c4c4;
 
-@include font-face("din",
-  font-files(
-  'DINPro-Light.otf'
-  )
-);
+@include font-face("din",font-files('DINPro-Light.otf'));
 
 html{background: $global_bg;}
 a{text-decoration: none;}
