@@ -1,5 +1,6 @@
 .screen4{
   background: url('../img/bg.jpg');
+  overflow: auto;
 }
 .graphic{
   font-size: 160px;
@@ -10,3 +11,11 @@
   left: 60px;
   font-family: 'din';
 }
+
+.grid-item {
+  width: 400px; background: #0b0b0b;
+  img{
+    width: 100%;
+  }
+}
+.grid-item--width2 { width: 400px; }
