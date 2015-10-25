@@ -2,4 +2,56 @@
   background: url('../img/gongsijieshao.jpg') no-repeat;
   background-size: cover;
   overflow: auto;
+  .gongsijieshao{
+    width: 1000px;
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    margin-left: -500px;
+
+    h2{
+      color: $global_gold;
+      font-size: 30px;
+      width: 100%;
+      text-align: center;
+      margin-top: 40px;
+    }
+    h3{
+      color: $global_font_color;
+      font-size: 24px;
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+
+    }
+    p{
+      width: 480px;
+      color: $global_font_color;
+      font-size: 12px;
+      line-height: 20px;
+      margin: 30px 0 60px 0;
+    }
+    p:first-child{
+      float: left;
+    }
+    p:last-child{
+      float: right;
+    }
+    img{
+      display: block;
+      margin: 60px auto;
+    }
+    .friendsLink{
+      width: 932px;
+      height: 133px;
+      margin: 30px auto;
+      background: url(../img/friends.png) no-repeat center;
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+      filter: grayscale(100%);
+      filter: gray;
+    }
+  }
 }

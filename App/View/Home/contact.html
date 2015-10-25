@@ -1,11 +1,11 @@
 <script type="text/javascript" src='http://webapi.amap.com/maps?v=1.3&key=13b39e306c7d25e2e14a6419c0ad2110'></script>
 <link rel="stylesheet" type="text/css" href="http://cache.amap.com/lbs/static/jsDemoStyle20150512.css ">
 <a href="javascript:;" class="topMenu" id="contact"><u>CONTACT</u></a>
-<div class="ctrContactModal">
-    <h2 class="contactModalSV">SOURCE VIDEO</h2>
-    <div id="contactModal">
+<div class="ctrContactModal" >
+    <!--<h2 class="contactModalSV">SOURCE VIDEO</h2>-->
+    <div id="contactModal" v-show="showContactModal" v-transition="showContactModals">
 
-        <a href="javascript:;" class="close"></a>
+        <a href="javascript:;" class="close" v-on="click:hideModal"></a>
 
         <div id="map"></div>
         <h2>Contact us<br>联系我们</h2>
@@ -24,6 +24,21 @@
     </div>
 </div>
 
+<style>
+    .showContactModals-enter{
+        -webkit-animation: zoomIn .2s;;
+        animation: zoomIn .2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    .showContactModals-leave{
+        -webkit-animation: fadeOutDown .2s;;
+        animation: fadeOutDown .2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+</style>
+
 <script type="text/javascript">
     var map = new AMap.Map('map', {
         resizeEnable: true,
@@ -36,4 +51,22 @@
         position: [116.434865, 40.043123]
     });
     marker.setMap(map);
+
+    var contact = new Vue({
+        el:'.ctrContactModal',
+        data:{
+            showContactModal:false,
+        },
+        methods:{
+            showModal:function(){
+                this.showContactModal = true;
+            },
+            hideModal:function(){
+                this.showContactModal = false;
+            },
+        }
+    })
+    $('.topMenu').on('click',function(){
+        contact.showModal();
+    })
 </script>

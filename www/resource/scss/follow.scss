@@ -2,6 +2,7 @@
   left: 50px;
 }
 #followBtn{
+  display: none;
   position: absolute;
   left: 50px;
   top: 70px;
@@ -14,9 +15,9 @@
     cursor: pointer;
     float: left;
     text-align: center;
-    img{
-      margin-top: 15px;
-    }
+    font-size: 30px;
+    color: #ffffff;
+    line-height: 58px;
   }
   li:hover{
     background: $global_gold;

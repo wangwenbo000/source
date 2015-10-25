@@ -6,6 +6,21 @@ $global_border_width:22px;
 $global_font_color:#c4c4c4;
 
 @include font-face("din",font-files('DINPro-Light.otf'));
+@include font-face("iconfont",
+  font-files(
+    'iconfont.eot',
+    'iconfont.woff',woff,
+    'iconfont.ttf',ttf,
+    'iconfont.svg',svg
+  )
+);
+.iconfont{
+  font-family:"iconfont" !important;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 html{background: $global_bg;}
 a{text-decoration: none;}

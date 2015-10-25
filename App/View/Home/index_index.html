@@ -30,9 +30,43 @@
 </div>
 </body>
 
-<script charset="utf-8">
+<script>
     $(document).ready(function() {
-        $('#sourceWeb').fullpage();
+        $('#sourceWeb').fullpage({
+            verticalCentered: false,
+            scrollingSpeed: 800,
+            easing: 'easeOutBounce',
+//            css3:true,
+            navigation: true,
+            navigationPosition: 'right',
+            navigationTooltips: ['index', 'SourceVideoWorks','Movie','Design','About','JoinUs'],
+            menu: true,
+            lockAnchors: false,
+            anchors:['index', 'SourceVideoWorks','Movie','Design','About','JoinUs'],
+            normalScrollElements: '#playvideo, #us',
+            afterLoad: function(anchorLink, index){
+                if(index == 3){
+                    playModal.movieList=a;
+                    swiperVideo.on('mouseover', function(e){
+                        console.log(e);
+                    })
+                }
+                if(index == 2){
+                    works.show();
+                }
+            },
+            onLeave: function(index, direction){
+                if(index == 2){
+                    works.hide();
+                }
+            }
+
+
+        });
+
+        $("#playvideo").niceScroll(".playScroll",{
+            scrollspeed:60
+        });
     });
 </script>
 <%=include footer.html%>

@@ -1,7 +1,37 @@
-<img src="resource/img/sourcework.png" alt="" id="sourceWork"/>
+<img src="resource/img/sourcework.png" alt="" id="sourceWork" v-show="showImg" v-transition="showImg"/>
 <img src="resource/img/down.png" alt="" class="down"/>
 
 <ul id="workMenu">
-  <li><a href="">Video Cases / 视频案例</a></li>
-  <li><a href="">Graphic Design / 平面案例</a></li>
+  <li><a href="/#Movie">Video Cases / 视频案例</a></li>
+  <li><a href="/#Design">Graphic Design / 平面案例</a></li>
 </ul>
+<style>
+  .showImg-enter{
+    -webkit-animation: fadeIn 1.2s;;
+    animation: fadeIn 1.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  .showImg-leave{
+    -webkit-animation: fadeOut 1.2s;;
+    animation: fadeOut 1.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+</style>
+<script>
+  var works = new Vue({
+    el:"#sourceWork",
+    data:{
+      showImg:false
+    },
+    methods:{
+      show:function(){
+        this.showImg = true
+      },
+      hide:function(){
+        this.showImg = false
+      }
+    }
+  })
+</script>

@@ -15,6 +15,11 @@ $newsBGColor:rgba(0,0,0,.7);
   margin-left: -16px;
   margin-top: 10%;
   z-index: 1000;
+  color: #ffffff;
+  font-size: 60px;
+  a{
+    color: #ffffff;
+  }
 }
 #idnewsMore{
   display: block;
@@ -76,9 +81,14 @@ $newsBGColor:rgba(0,0,0,.7);
   }
 }
 .news-container{
+  position: absolute;
+  width: 100%;
   height: 100%;
   color: #fff;
+  overflow:hidden;
+  top: 0;
   .swiper-slide{
+    height: 100%;
     overflow: hidden;
     text-align: center;
     background-color: $global_bg;

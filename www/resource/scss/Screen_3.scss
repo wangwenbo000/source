@@ -1,12 +1,22 @@
 .screen3{
   background: $global_bg;
+  overflow: hidden;
+  .swiper-container-horizontal>.swiper-scrollbar{
+    left: 0;
+    width: 100%;
+  }
+  .swiper-scrollbar-drag{
+    background: $global_gold;
+  }
   .video-container{
-    margin-top: 80px;
+    position: absolute;
+    margin-top: 70px;
     width: calc(100% - 22px*2);
     margin-left: $global_border_width;
     .swiper-slide{
-      max-height: 380px;
+      max-height: 80%;
       overflow: hidden;
+      position: relative;
       img{
         width: 100%;
         height: 100%;
@@ -27,10 +37,36 @@
         filter: gray;
         transition: .6s -webkit-filter ease;
       }
+      .videoHoverInfo{
+        font-family: din;
+        padding: 10px;
+        position: absolute;
+        z-index: 100;
+        width: 180px;
+        height: 180px;
+        background: rgba(0,0,0,.8);
+        left: 20px;
+        bottom: 20px;
+        p,h3{
+          font-size: 14px;
+          color: $global_font_color;
+        }
+        h2{
+          font-size: 26px;
+          color: $global_gold;
+          margin-top: 20px;
+        }
+        time{
+          display: block;
+          margin-top: 70px;
+          font-size: 36px;
+          color: $global_font_color;
+        }
+      }
     }
     .swiper-scrollbar{
       position: absolute;
-      bottom: 16%;
+      bottom: -8px;
       background: #2d2d2d;
     }
   }
@@ -42,10 +78,32 @@
   background: #292929;
   position: absolute;
   bottom: $global_border_width;
+  z-index: 1004;
   div{
     border-right: 1px solid rgba(255, 255, 255, .2);;
     width: 78px;
     height: 100%;
     float: left;
+    text-align: center;
+    line-height: 72px;
+    color: $global_font_color;
+    font-size: 40px;
+  }
+  .vTime{
+    font-size: 20px;
+    font-family: din;
+  }
+  .vFull{
+    float: right;
+    border-right: none;
+    border-left: 1px solid rgba(255,255,255,0.2);
+  }
+  .vProgerss{
+    position: absolute;
+    background: rgba(214,178,100,.3);
+    border-right: 6px solid $global_gold;
+    filter: .6;
+    left: 237px;
+    right: 79px;
   }
 }

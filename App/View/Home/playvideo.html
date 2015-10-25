@@ -1,42 +1,58 @@
-<div id="playvideo">
-    <div class="cover">
-        <img src="/resource/img/playbtn.png" width="80" alt=""/>
-        <div class="logoTag"></div>
-        <ul class="playIcon">
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
-    <div class="videoInfo clearfix">
-        <div class="videoYear">2015</div>
-        <div class="videoTitle">
-            <h2><南方></h2>
-            <h2>North</h2>
+<div id="playvideo" v-show="showPlayVideoModal" v-transition="showPlayVideoModal">
+    <div class="playScroll" >
+        <div class="cover">
+            <img src="/resource/img/playbtn.png" width="80" alt=""/>
+            <div class="logoTag"></div>
+            <ul class="playIcon">
+                <li v-on="click:hideModal"></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
-        <div class="videoLong">时长<br><time>30:40</time></div>
-        <div class="videoCast">
-            导演: 阿兰·泰勒
-            编剧: 莱塔·卡罗格里迪斯 / 帕特里克·卢西尔 / 詹姆斯·卡梅隆 / 盖尔·安妮·赫德
-            主演: 阿诺·施瓦辛格 / 杰森·克拉科 / 艾米莉亚·克拉克 / 杰·科特尼 / J·K·西蒙斯 / 更多...
-            类型: 动作 / 科幻 / 冒险
+        <div class="videoInfo clearfix">
+            <div class="videoYear">2015</div>
+            <div class="videoTitle">
+                <h2><南方></h2>
+                <h2>North</h2>
+            </div>
+            <div class="videoLong">时长<br><time>30:40</time></div>
+            <div class="videoCast">
+                导演: 阿兰·泰勒
+                编剧: 莱塔·卡罗格里迪斯 / 帕特里克·卢西尔 / 詹姆斯·卡梅隆 / 盖尔·安妮·赫德
+                主演: 阿诺·施瓦辛格 / 杰森·克拉科 / 艾米莉亚·克拉克 / 杰·科特尼 / J·K·西蒙斯 / 更多...
+                类型: 动作 / 科幻 / 冒险
+            </div>
         </div>
-    </div>
-    <div class="filmProfile">
-        <p>
-            电影围绕了南方家庭一个女孩成长，和她父亲形象变化的一个故事。讲述了父亲奥古斯汀有着一颗无所不知又无所不能的聪慧大脑，小女孩埃斯特雷亚从来都不知道父亲有着怎样的过去，她唯一知道的是，南方，是父亲的故乡亦是归宿。 成年后，埃斯特雷亚对父亲的形象也在慢慢的产生着变化。秘密情人的暴露甚至让他失掉了作为一个丈夫最起码的忠诚。埃斯特雷亚将这一切都看在眼里，诸多的问题萦绕在她的心头......
-        </p>
-    </div>
-    <div class="stagePhoto">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="resource/img/4.jpg" alt="" /></div>
-            <div class="swiper-slide"><img src="resource/img/2.jpg" alt="" /></div>
-            <div class="swiper-slide"><img src="resource/img/3.jpg" alt="" /></div>
-            <div class="swiper-slide"><img src="resource/img/4.jpg" alt="" /></div>
+        <div class="filmProfile">
+            <p>
+                电影围绕了南方家庭一个女孩成长，和她父亲形象变化的一个故事。讲述了父亲奥古斯汀有着一颗无所不知又无所不能的聪慧大脑，小女孩埃斯特雷亚从来都不知道父亲有着怎样的过去，她唯一知道的是，南方，是父亲的故乡亦是归宿。 成年后，埃斯特雷亚对父亲的形象也在慢慢的产生着变化。秘密情人的暴露甚至让他失掉了作为一个丈夫最起码的忠诚。埃斯特雷亚将这一切都看在眼里，诸多的问题萦绕在她的心头......
+            </p>
         </div>
+        <div class="stagePhoto">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="resource/img/4.jpg" alt="" /></div>
+                <div class="swiper-slide"><img src="resource/img/2.jpg" alt="" /></div>
+                <div class="swiper-slide"><img src="resource/img/3.jpg" alt="" /></div>
+                <div class="swiper-slide"><img src="resource/img/4.jpg" alt="" /></div>
+            </div>
+        </div>
+        <div class="stagePhoto-scrollbar"></div>
     </div>
-    <div class="stagePhoto-scrollbar"></div>
 </div>
+<style>
+    .showPlayVideoModal-enter{
+        -webkit-animation: zoomIn .2s;;
+        animation: zoomIn .2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    .showPlayVideoModal-leave{
+        -webkit-animation: zoomOut .2s;;
+        animation: zoomOut .2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+</style>
 <script>
     var swiper = new Swiper('.stagePhoto', {
         pagination: '.swiper-pagination',
@@ -48,4 +64,18 @@
         scrollbarHide:false,
         mousewheelControl : true,
     });
+    var playVideo = new Vue({
+        el:"#playvideo",
+        data:{
+            showPlayVideoModal:false,
+        },
+        methods:{
+            showModal:function(){
+                this.showPlayVideoModal = true;
+            },
+            hideModal:function(){
+                this.showPlayVideoModal = false;
+            }
+        }
+    })
 </script>

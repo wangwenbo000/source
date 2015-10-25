@@ -1,33 +1,89 @@
 <div class="video-container">
     <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="resource/img/video/1.jpg" alt="" /></div>
-        <div class="swiper-slide"><img src="resource/img/video/2.jpg" alt="" /></div>
-        <div class="swiper-slide"><img src="resource/img/video/3.jpg" alt="" /></div>
-        <div class="swiper-slide"><img src="resource/img/video/4.jpg" alt="" /></div>
-        <div class="swiper-slide"><img src="resource/img/video/5.jpg" alt="" /></div>
-        <div class="swiper-slide"><img src="resource/img/video/6.jpg" alt="" /></div>
-        <div class="swiper-slide"><img src="resource/img/video/7.jpg" alt="" /></div>
-        <div class="swiper-slide"><img src="resource/img/video/8.jpg" alt="" /></div>
-        <div class="swiper-slide"><img src="resource/img/video/1.jpg" alt="" /></div>
-        <div class="swiper-slide"><img src="resource/img/video/2.jpg" alt="" /></div>
+        <!--v-transition="movieFlyIn" stagger="200"-->
+        <div class="swiper-slide" v-repeat="ml in movieList | filterBy query" v-on="mouseover:showInfoHover(ml)">
+            <div class="videoHoverInfo" v-if="infoshow">
+                <p>2015/电视剧</p>
+                <h2>神犬小七</h2>
+                <h3>hero dog</h3>
+                <time>{{ml.time}}</time>
+            </div>
+            <img  v-attr="src:ml.img" alt="" v-on="click:showModal"/>
+        </div>
     </div>
     <div class="swiper-scrollbar"></div>
 </div>
 
 <div id="player">
-  <div class="vMenu"></div>
-  <div class="vPlay"></div>
-  <div class="vTime"></div>
+  <div class="vMenu"><i class="iconfont">&#xe605;</i></div>
+  <div class="vPlay"><i class="iconfont">&#xe603;</i></div>
+  <div class="vTime">0:00</div>
   <div class="vProgerss"></div>
-  <div class="vFull"></div>
+  <div class="vFull"><i class="iconfont">&#xe604;</i></div>
 </div>
+
+<style>
+    .movieFlyIn-enter{
+        -webkit-animation: zoomIn .4s;;
+        animation: zoomIn .4s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    .movieFlyIn-leave{
+        -webkit-animation: fadeOutDown .4s;;
+        animation: fadeOutDown .4s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+</style>
+
 <script>
-    var swiper = new Swiper('.video-container', {
+    var a = [
+        {img:'resource/img/video/1.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
+        {img:'resource/img/video/2.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
+        {img:'resource/img/video/3.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
+        {img:'resource/img/video/4.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
+        {img:'resource/img/video/5.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
+        {img:'resource/img/video/6.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
+        {img:'resource/img/video/7.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
+        {img:'resource/img/video/8.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
+        {img:'resource/img/video/1.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
+        {img:'resource/img/video/2.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
+        {img:'resource/img/video/3.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
+        {img:'resource/img/video/4.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
+        {img:'resource/img/video/5.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
+        {img:'resource/img/video/6.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
+        {img:'resource/img/video/7.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
+    ];
+    var playModal = new Vue({
+        el:'.video-container',
+        data:{
+            movieList:[],
+            flyIn:false,
+            infoshow:false,
+            query:''
+        },
+        methods:{
+            showModal:function(){
+                playVideo.showModal();
+            },
+            show:function(){
+                this.movieList = a;
+            },
+            showInfoHover:function(ml){
+                console.log(ml);
+            }
+        }
+    });
+
+    var swiperVideo = new Swiper('.video-container', {
         pagination: '.swiper-pagination',
         slidesPerView: 4.2,
         slidesPerColumn: 2,
         paginationClickable: true,
         spaceBetween: 0,
+        observer:true,
+        observeParents:true,
         scrollbar:'.swiper-scrollbar',
         scrollbarHide:false,
         mousewheelControl : true,
