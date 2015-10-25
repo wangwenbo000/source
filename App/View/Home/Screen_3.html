@@ -1,8 +1,8 @@
 <div class="video-container">
     <div class="swiper-wrapper">
         <!--v-transition="movieFlyIn" stagger="200"-->
-        <div class="swiper-slide" v-repeat="ml in movieList | filterBy query" v-on="mouseover:showInfoHover(ml)">
-            <div class="videoHoverInfo" v-if="infoshow">
+        <div class="swiper-slide" v-repeat="ml in movieList | filterBy query" v-on="mouseenter:showInfoHover(ml) ,mouseout:hideInfoHover(ml)">
+            <div class="videoHoverInfo" v-if=ml.state v-transition="movieFlyIn" v-on="mouseenter:showInfoHover(ml) ,mouseout:hideInfoHover(ml)">
                 <p>2015/电视剧</p>
                 <h2>神犬小七</h2>
                 <h3>hero dog</h3>
@@ -24,14 +24,14 @@
 
 <style>
     .movieFlyIn-enter{
-        -webkit-animation: zoomIn .4s;;
-        animation: zoomIn .4s;
+        -webkit-animation: slideInUp .4s;;
+        animation: slideInUp .4s;
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
     }
     .movieFlyIn-leave{
-        -webkit-animation: fadeOutDown .4s;;
-        animation: fadeOutDown .4s;
+        -webkit-animation: slideOutDown .4s;;
+        animation: slideOutDown .4s;
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
     }
@@ -39,21 +39,21 @@
 
 <script>
     var a = [
-        {img:'resource/img/video/1.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
-        {img:'resource/img/video/2.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
-        {img:'resource/img/video/3.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
-        {img:'resource/img/video/4.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
-        {img:'resource/img/video/5.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
-        {img:'resource/img/video/6.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
-        {img:'resource/img/video/7.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
-        {img:'resource/img/video/8.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
-        {img:'resource/img/video/1.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
-        {img:'resource/img/video/2.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
-        {img:'resource/img/video/3.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
-        {img:'resource/img/video/4.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
-        {img:'resource/img/video/5.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
-        {img:'resource/img/video/6.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
-        {img:'resource/img/video/7.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧"},
+        {img:'resource/img/video/1.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
+        {img:'resource/img/video/2.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
+        {img:'resource/img/video/3.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
+        {img:'resource/img/video/4.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
+        {img:'resource/img/video/5.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
+        {img:'resource/img/video/6.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
+        {img:'resource/img/video/7.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
+        {img:'resource/img/video/8.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
+        {img:'resource/img/video/1.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
+        {img:'resource/img/video/2.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
+        {img:'resource/img/video/3.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
+        {img:'resource/img/video/4.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
+        {img:'resource/img/video/5.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
+        {img:'resource/img/video/6.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
+        {img:'resource/img/video/7.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
     ];
     var playModal = new Vue({
         el:'.video-container',
@@ -71,7 +71,10 @@
                 this.movieList = a;
             },
             showInfoHover:function(ml){
-                console.log(ml);
+                ml.state = true;
+            },
+            hideInfoHover:function(ml){
+                ml.state = false;
             }
         }
     });

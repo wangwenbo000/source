@@ -43,7 +43,7 @@
             menu: true,
             lockAnchors: false,
             anchors:['index', 'SourceVideoWorks','Movie','Design','About','JoinUs'],
-            normalScrollElements: '#playvideo, #us',
+            normalScrollElements: '#playvideo, #us, #playvideo',
             afterLoad: function(anchorLink, index){
                 if(index == 3){
                     playModal.movieList=a;
@@ -62,10 +62,6 @@
             }
 
 
-        });
-
-        $("#playvideo").niceScroll(".playScroll",{
-            scrollspeed:60
         });
     });
 </script>
