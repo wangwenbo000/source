@@ -1,5 +1,5 @@
-<div id="newsModal">
-    <div class="closeNewsModal"></div>
+<div id="newsModal" v-show="isModalShow" v-transition="newsModal" v-cloak>
+    <div class="closeNewsModal" v-on="click:hide"></div>
     <ul class="newsCategory">
         <li>
             <p>咨询动态</p>
@@ -61,3 +61,36 @@
         </li>
     </ul>
 </div>
+<style>
+    .newsModal-enter{
+        -webkit-animation: slideInLeft .2s;;
+        animation: slideInLeft .2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    .newsModal-leave{
+        -webkit-animation: slideOutLeft .2s;;
+        animation: slideOutLeft .2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+</style>
+<script>
+    var newsModal = new Vue({
+        el:"#newsModal",
+        data:{
+            isModalShow:false
+        },
+        methods:{
+            show:function(){
+                this.isModalShow = true;
+            },
+            hide:function(){
+                this.isModalShow = false;
+            }
+        }
+    })
+
+
+
+</script>

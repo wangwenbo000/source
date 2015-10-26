@@ -7,6 +7,7 @@
 <%=include playvideo.html%>
 <%=include news.html%>
 <%=include menu.html%>
+<%=include design.html%>
 
 <div id="sourceWeb">
     <div class="section screen1">
@@ -43,7 +44,7 @@
             menu: true,
             lockAnchors: false,
             anchors:['index', 'SourceVideoWorks','Movie','Design','About','JoinUs'],
-            normalScrollElements: '#playvideo, #us, #playvideo',
+            normalScrollElements: '#playvideo, #us, #playvideo, #newsModal, .video-container',
             afterLoad: function(anchorLink, index){
                 if(index == 3){
                     playModal.movieList=a;
@@ -53,11 +54,16 @@
                 }
                 if(index == 2){
                     works.show();
+                    works.showW();
                 }
             },
             onLeave: function(index, direction){
+                if(index == 1){
+                    newsModal.hide();
+                }
                 if(index == 2){
                     works.hide();
+                    works.hideW();
                 }
             }
 

@@ -1,6 +1,21 @@
-<a href="javascript:;" class="topMenu" id="follow"><u>FOLOOW</u></a>
-<ul id="followBtn">
-  <li><i class="iconfont">&#xe600;</i></li>
-  <li><i class="iconfont">&#xe601;</i></li>
-  <li></li>
-</ul>
+<div class="follow">
+  <a href="javascript:;" class="topMenu" id="follow" v-on="click:shwoShareBtn"><u>FOLOOW</u></a>
+  <ul id="followBtn" v-show="showShare">
+    <li><i class="iconfont">&#xe600;</i></li>
+    <li><i class="iconfont">&#xe601;</i></li>
+  </ul>
+</div>
+
+<script>
+  var follow = new Vue({
+    el:'.follow',
+    data:{
+      showShare:false
+    },
+    methods:{
+      shwoShareBtn:function(){
+        this.showShare = true;
+      }
+    }
+  })
+</script>

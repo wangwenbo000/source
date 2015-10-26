@@ -1,22 +1,21 @@
 #newsModal{
-  width: 60%;
-  height: 80%;
+  width: 800px;
+  height: 100%;
   position: absolute;
-  left: 50%;
-  top: 30px;
-  margin-left: -30%;
+  left: 0;
+  top: 0;
   background: rgba(0,0,0,.9);
-  z-index: 1000;
+  z-index: 1008;
   color: #fff;
   font-family: din;
-  overflow: hidden;
-  display: none;
+  //display: none;
   .active{
     color: $global_gold;
   }
   .newsCategory{
     width: 30%;
     float: left;
+    margin-left: 30px;
     padding-top: 100px;
 
 
@@ -39,7 +38,7 @@
     }
   }
   .newsList{
-    width: 56%;
+    width: 60%;
     height: 73%;
     float: left;
     margin-top: 140px;
@@ -71,11 +70,14 @@
   }
   .closeNewsModal{
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: -54px;
+    top: 50%;
+    margin-top: -15px;
     width: 60px;
     height: 60px;
-    background: #313131 url("../img/close.png") no-repeat center;
+    cursor: pointer;
+    background: url("../img/close.png") no-repeat center;
+    background-size: 30px;
   }
 
 }

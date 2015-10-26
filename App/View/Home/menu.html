@@ -1,1 +1,101 @@
-<a href="javascript:;" class="topMenu" id="menu"><img src="resource/img/menu.png" alt="" class="menuTop"></a>
+<div class="menuHover">
+    <a href="javascript:;" class="topMenu" id="menu"><img src="resource/img/menu.png" alt="" class="menuTop" v-show="showbar" v-on="click:hideBar" v-transition="menuModal"></a>
+    <ul class="textMenu" v-show="showmenu" v-on="mouseleave:outDefault,mouseenter:stop" v-transition="textMenuModal">
+        <li>
+            <a href="/#index">
+                <span>Home</span>
+                <h2>主页</h2>
+            </a>
+        </li>
+        <li>
+            <a href="/#SourceVideoWorks">
+            <span>Work</span>
+            <h2>作品</h2>
+            </a>
+        </li>
+        <li>
+            <a href="/#index" class="openNews">
+            <span>Situation</span>
+            <h2>公告</h2>
+            </a>
+        </li>
+        <li>
+            <a href="/#About">
+            <span>About</span>
+            <h2>关于索斯</h2>
+            </a>
+        </li>
+        <li>
+            <a href="/#JoinUs">
+            <span>Join us</span>
+            <h2>加入我们</h2>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<style>
+    .menuModal-enter{
+        -webkit-animation: fadeInDown .2s;;
+        animation: fadeInDown .2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    .menuModal-leave{
+        -webkit-animation: fadeOutUp .2s;;
+        animation: fadeOutUp .2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    .textMenuModal-enter{
+        -webkit-animation: fadeInUp .2s;;
+        animation: fadeInUp .2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    .textMenuModal-leave{
+        -webkit-animation: fadeOutDown .2s;;
+        animation: fadeOutDown .2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+</style>
+
+<script>
+    var timer=null;
+    var menu = new Vue({
+        el:'.menuHover',
+        data:{
+            showbar:true,
+            showmenu:false,
+        },
+        methods:{
+            hideBar:function(){
+                this.showbar = false;
+                this.showMenu();
+            },
+            showBar:function(){
+                this.showbar = true;
+                this.hideMenu();
+            },
+            showMenu:function(){
+                this.showmenu = true;
+            },
+            hideMenu:function(){
+                this.showmenu = false;
+            },
+            outDefault:function(){
+                var _this = this;
+                timer = setTimeout(function(){
+                    _this.showBar();
+                },4000);
+            },
+            stop:function(){
+                clearTimeout(timer);
+            }
+        }
+    })
+    $('.openNews').click(function(){
+        newsModal.show();
+    })
+</script>

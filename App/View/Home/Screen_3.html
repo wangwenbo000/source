@@ -1,20 +1,20 @@
 <div class="video-container">
     <div class="swiper-wrapper">
         <!--v-transition="movieFlyIn" stagger="200"-->
-        <div class="swiper-slide" v-repeat="ml in movieList | filterBy query" v-on="mouseenter:showInfoHover(ml) ,mouseout:hideInfoHover(ml)">
-            <div class="videoHoverInfo" v-if=ml.state v-transition="movieFlyIn" v-on="mouseenter:showInfoHover(ml) ,mouseout:hideInfoHover(ml)">
+        <div class="swiper-slide" v-repeat="ml in movieList | filterBy query" v-transition="movieFlyIn" stagger="200" v-on="mouseenter:showInfoHover(ml) ,mouseleave:hideInfoHover(ml), click:showModal" v-cloak>
+            <div class="videoHoverInfo" v-if=ml.state v-transition="movieInfoIn">
                 <p>2015/电视剧</p>
                 <h2>神犬小七</h2>
                 <h3>hero dog</h3>
                 <time>{{ml.time}}</time>
             </div>
-            <img  v-attr="src:ml.img" alt="" v-on="click:showModal"/>
+            <img  v-attr="src:ml.img" alt="" />
         </div>
     </div>
     <div class="swiper-scrollbar"></div>
 </div>
 
-<div id="player">
+<div id="player" id="myplayer-timeline-timeline">
   <div class="vMenu"><i class="iconfont">&#xe605;</i></div>
   <div class="vPlay"><i class="iconfont">&#xe603;</i></div>
   <div class="vTime">0:00</div>
@@ -23,21 +23,28 @@
 </div>
 
 <style>
-    .movieFlyIn-enter{
-        -webkit-animation: slideInUp .4s;;
-        animation: slideInUp .4s;
+    .movieInfoIn-enter{
+        -webkit-animation: slideInUp .2s;;
+        animation: slideInUp .2s;
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
     }
-    .movieFlyIn-leave{
-        -webkit-animation: slideOutDown .4s;;
-        animation: slideOutDown .4s;
+    .movieFlyIn-enter{
+        -webkit-animation: fadeInLeft .8s;;
+        animation: fadeInLeft .8s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    .movieInfoIn-leave{
+        -webkit-animation: slideOutDown .2s;;
+        animation: slideOutDown .2s;
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
     }
 </style>
 
 <script>
+    var Mtimer = null;
     var a = [
         {img:'resource/img/video/1.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
         {img:'resource/img/video/2.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
@@ -47,13 +54,9 @@
         {img:'resource/img/video/6.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
         {img:'resource/img/video/7.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
         {img:'resource/img/video/8.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
-        {img:'resource/img/video/1.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
-        {img:'resource/img/video/2.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
-        {img:'resource/img/video/3.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
         {img:'resource/img/video/4.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
         {img:'resource/img/video/5.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
         {img:'resource/img/video/6.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
-        {img:'resource/img/video/7.jpg',time:"30:40",title:"神犬小七",enname:"hero dog",year:"2015",category:"电视剧",state:false},
     ];
     var playModal = new Vue({
         el:'.video-container',
@@ -71,10 +74,14 @@
                 this.movieList = a;
             },
             showInfoHover:function(ml){
-                ml.state = true;
+                Mtimer = setTimeout(function(){
+                    ml.state = true;
+                },400);
             },
             hideInfoHover:function(ml){
+                clearTimeout(Mtimer);
                 ml.state = false;
+
             }
         }
     });
@@ -86,9 +93,10 @@
         paginationClickable: true,
         spaceBetween: 0,
         observer:true,
-        observeParents:true,
+        grabCursor : true,
         scrollbar:'.swiper-scrollbar',
         scrollbarHide:false,
         mousewheelControl : true,
+        freeMode: true
     });
 </script>

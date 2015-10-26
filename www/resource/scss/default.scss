@@ -4,6 +4,53 @@ $global_gold:#d6b264;
 $global_border_width:22px;
 
 $global_font_color:#c4c4c4;
+[v-cloak] {
+  display: none
+}
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  background: $global_bg url("../img/load.gif") no-repeat center;
+  background-size: 120px;
+  position: absolute;
+  z-index: 2000;
+}
+
+.pace-inactive {
+  //display: none;
+  -webkit-animation: fadeOut .9s;;
+  animation: fadeOut .9s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.pace .pace-progress {
+  background: $global_gold;
+  position: fixed;
+  z-index: 2000;
+  top: 50%;
+  margin-top:-1px;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+  font-size: 12px;
+}
+.pace .pace-progress:after {
+  content: attr(data-progress-text);
+  position: fixed;
+  text-align: center;
+  right: 0;
+  top: 10px;
+  color: #ffffff;
+  display: block;
+}
 
 @include font-face("din",font-files('DINPro-Light.otf'));
 @include font-face("iconfont",

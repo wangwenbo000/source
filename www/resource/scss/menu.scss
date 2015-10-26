@@ -2,3 +2,42 @@
   left: 50%;
   margin-left: -13px;
 }
+.textMenu{
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  width: 500px;
+  margin-left: -250px;
+  z-index: 1000;
+  color: $global_font_color;
+  li{
+    width: 100px;
+    float: left;
+    span,h2{
+      display: block;
+      text-align: center;
+      font-size: 12px;
+    }
+    h2{
+      margin-top: 4px;
+    }
+    a{
+      color: $global_font_color;
+    }
+    h2:hover{
+      color: $global_gold;
+    }
+
+  }
+
+}
+.menuHover{
+  position: fixed;
+  left: 50%;
+  margin-left: -30%;
+
+  top: 22px;
+  width: 60%;
+  height: 72px;
+  z-index: 1000;
+}

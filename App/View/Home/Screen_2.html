@@ -1,10 +1,13 @@
-<img src="resource/img/sourcework.png" alt="" id="sourceWork" v-show="showImg" v-transition="showImg"/>
-<img src="resource/img/down.png" alt="" class="down"/>
+<div class="works">
+  <img src="resource/img/sourcework.png" alt="" id="sourceWork" v-show="showImg" v-transition="showImg"/>
+  <div class="down"><a href="/#Movie"><i class="iconfont">&#xe606;</i></a></div>
 
-<ul id="workMenu">
-  <li><a href="/#Movie">Video Cases / 视频案例</a></li>
-  <li><a href="/#Design">Graphic Design / 平面案例</a></li>
-</ul>
+  <ul id="workMenu" v-show="showWorkMenu"  v-transition="showWorkMenu">
+    <li><a href="/#Movie">Video Cases / 视频案例</a></li>
+    <li><a href="/#Design">Graphic Design / 平面案例</a></li>
+  </ul>
+</div>
+
 <style>
   .showImg-enter{
     -webkit-animation: fadeIn 1.2s;;
@@ -18,12 +21,25 @@
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
   }
+  .showWorkMenu-enter{
+    -webkit-animation: slideInUp 1.2s;;
+    animation: slideInUp 1.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  .showWorkMenu-leave{
+    -webkit-animation: slideOutDown 1.2s;;
+    animation: slideOutDown 1.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
 </style>
 <script>
   var works = new Vue({
-    el:"#sourceWork",
+    el:".works",
     data:{
-      showImg:false
+      showImg:false,
+      showWorkMenu:false
     },
     methods:{
       show:function(){
@@ -31,6 +47,12 @@
       },
       hide:function(){
         this.showImg = false
+      },
+      showW:function(){
+        this.showWorkMenu = true
+      },
+      hideW:function(){
+        this.showWorkMenu = false
       }
     }
   })

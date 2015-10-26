@@ -1,12 +1,17 @@
-<div id="playvideo" v-show="showPlayVideoModal" v-transition="showPlayVideoModal">
+<div id="playvideo" v-show="showPlayVideoModal" v-transition="showPlayVideoModal" v-cloak>
     <div class="playScroll" >
         <div class="cover">
-            <img src="/resource/img/playbtn.png" width="80" alt=""/>
+
+            <video id="example_video_1" class="cover vjs-default-skin" controls preload="auto" width="1200" height="700" poster="/resource/img/videocover.jpg">
+                <source src="/resource/swf/05MLVB01MP4.mp4" type='video/mp4' />
+            </video>
+
+            <!--<img src="/resource/img/videocover.jpg" width="80" alt=""/>-->
             <div class="logoTag"></div>
             <ul class="playIcon">
                 <li v-on="click:hideModal"></li>
-                <li></li>
-                <li></li>
+                <li><i class="iconfont">&#xe600;</i></li>
+                <li><i class="iconfont">&#xe601;</i></li>
             </ul>
         </div>
         <div class="videoInfo clearfix">
@@ -77,5 +82,6 @@
                 this.showPlayVideoModal = false;
             }
         }
-    })
+    });
+
 </script>
