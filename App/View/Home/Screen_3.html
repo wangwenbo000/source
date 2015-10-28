@@ -1,7 +1,7 @@
 <div class="video-container">
     <div class="swiper-wrapper" v-show="showAll" v-transition="showall">
         <!--v-transition="movieFlyIn" stagger="200"-->
-        <div class="swiper-slide" v-repeat="ml in movieList | filterBy query"  v-on="mouseenter:showInfoHover(ml) ,mouseleave:hideInfoHover(ml), click:showModal" v-cloak>
+        <div class="swiper-slide" v-repeat="ml in movieList | filterBy query" v-on="mouseenter:showInfoHover(ml) ,mouseleave:hideInfoHover(ml), click:showModal" v-cloak>
             <div class="videoHoverInfo" v-if=ml.state v-transition="movieInfoIn">
                 <p>2015/电视剧</p>
                 <h2>神犬小七</h2>

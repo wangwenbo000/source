@@ -2,11 +2,11 @@
     <div class="playScroll" >
         <div class="cover" id="youkuplayer">
 
-            <!--<video id="example_video_1" class="cover vjs-default-skin" controls preload="auto" width="1200" height="700" poster="/resource/img/videocover.jpg">-->
-                <!--<source src="/resource/swf/05MLVB01MP4.mp4" type='video/mp4' />-->
-            <!--</video>-->
+            <video id="example_video_1" class="cover vjs-default-skin" controls preload="auto" width="1200" height="700" poster="/resource/img/videocover.jpg">
+                <source src="/resource/swf/05MLVB01MP4.mp4" type='video/mp4' />
+            </video>
 
-            <!--<img src="/resource/img/videocover.jpg" width="80" alt=""/>-->
+            <img src="/resource/img/videocover.jpg" width="80" alt=""/>
             <div class="logoTag"></div>
             <ul class="playIcon">
                 <li v-on="click:hideModal"></li>
@@ -59,14 +59,14 @@
     }
 </style>
 <script>
-    window.onload = function(){
-        player = new YKU.Player('youkuplayer',{
-            styleid: '1',
-            client_id: '32094c383c670dbc',
-            vid: 'XNjg1NzQ3MjA4',
-            show_related: false
-        });
-    }
+//    window.onload = function(){
+//        player = new YKU.Player('youkuplayer',{
+//            styleid: '1',
+//            client_id: '32094c383c670dbc',
+//            vid: 'XNjg1NzQ3MjA4',
+//            show_related: false
+//        });
+//    }
     var swiper = new Swiper('.stagePhoto', {
         pagination: '.swiper-pagination',
         slidesPerView: 2.6,
