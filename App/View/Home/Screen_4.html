@@ -1,1 +1,30 @@
 <h2 class="graphic">GRAPHIC DESIGN</h2>
+
+<div class="graphicPoster">
+    <div v-on="click:openModal"><img src="/resource/img/poster/1.jpeg" alt=""/></div>
+    <div><img src="/resource/img/poster/2.jpeg" alt=""/></div>
+    <div><img src="/resource/img/poster/3.jpeg" alt=""/></div>
+    <div><img src="/resource/img/poster/4.jpeg" alt=""/></div>
+    <div><img src="/resource/img/poster/5.jpeg" alt=""/></div>
+    <div><img src="/resource/img/poster/6.jpeg" alt=""/></div>
+    <div><img src="/resource/img/poster/7.jpeg" alt=""/></div>
+    <div><img src="/resource/img/poster/8.jpeg" alt=""/></div>
+    <div><img src="/resource/img/poster/9.jpeg" alt=""/></div>
+    <div><img src="/resource/img/poster/10.jpeg" alt=""/></div>
+    <div><img src="/resource/img/poster/11.jpeg" alt=""/></div>
+    <div><img src="/resource/img/poster/12.jpeg" alt=""/></div>
+</div>
+
+<script>
+    var poster = new Vue({
+        el:".graphicPoster",
+        data:{
+
+        },
+        methods:{
+          openModal:function(){
+              posterModal.show();
+          }
+        }
+    })
+</script>

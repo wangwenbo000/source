@@ -1,7 +1,6 @@
 <%=include header.html%>
 <body>
 <%=include border.html%>
-
 <%=include follow.html%>
 <%=include contact.html%>
 <%=include playvideo.html%>
@@ -44,7 +43,7 @@
             menu: true,
             lockAnchors: false,
             anchors:['index', 'SourceVideoWorks','Movie','Design','About','JoinUs'],
-            normalScrollElements: '#playvideo, #us, #playvideo, #newsModal, .video-container',
+            normalScrollElements: '#playvideo, #us, #playvideo, #newsModal, .video-container, .graphicPoster',
             afterLoad: function(anchorLink, index){
                 if(index == 3){
                     playModal.movieList=a;
@@ -56,6 +55,12 @@
                     works.show();
                     works.showW();
                 }
+                if(index == 4){
+                    $('.graphicPoster').masonry({
+                        itemSelector: 'div',
+                        columnWidth: 6
+                    });
+                }
             },
             onLeave: function(index, direction){
                 if(index == 1){
@@ -64,6 +69,12 @@
                 if(index == 2){
                     works.hide();
                     works.hideW();
+                }
+                if(index == 3){
+                    $('.graphicPoster').masonry({
+                        itemSelector: 'div',
+                        columnWidth: 6
+                    });
                 }
             }
 

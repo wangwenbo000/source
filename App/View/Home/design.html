@@ -1,3 +1,50 @@
-<div class="designModal">
+<div class="designModal" v-show="isShowDesign" v-transition="designModal">
+    <div class="designModalInfo">
+        <!-- 多说评论框 start -->
+        <div class="ds-thread" data-thread-key="1" data-title="神犬小气" data-url="wangwenbo.me/id/1"></div>
+        <!-- 多说评论框 end -->
+    </div>
+    <div class="closeDesignModal" v-on="click:hide"></div>
     <img src="/resource/img/paper.png" alt=""/>
 </div>
+<style>
+
+    .designModal-enter {
+        -webkit-animation: slideInLeft .4s;;
+        animation: slideInLeft .4s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    .designModal-leave {
+        -webkit-animation: fadeOutLeft .2s;;
+        animation: fadeOutLeft .2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+</style>
+<script>
+    var posterModal = new Vue({
+        el: '.designModal',
+        data: {
+            isShowDesign: false,
+        },
+        methods: {
+            show: function () {
+                this.isShowDesign = true;
+            },
+            hide: function () {
+                this.isShowDesign = false;
+            }
+        }
+    });
+    var duoshuoQuery = {short_name:"wangwenbo"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
