@@ -1,7 +1,7 @@
 <div class="video-container">
-    <div class="swiper-wrapper">
+    <div class="swiper-wrapper" v-show="showAll" v-transition="showall">
         <!--v-transition="movieFlyIn" stagger="200"-->
-        <div class="swiper-slide" v-repeat="ml in movieList | filterBy query" v-transition="movieFlyIn" stagger="200" v-on="mouseenter:showInfoHover(ml) ,mouseleave:hideInfoHover(ml), click:showModal" v-cloak>
+        <div class="swiper-slide" v-repeat="ml in movieList | filterBy query"  v-on="mouseenter:showInfoHover(ml) ,mouseleave:hideInfoHover(ml), click:showModal" v-cloak>
             <div class="videoHoverInfo" v-if=ml.state v-transition="movieInfoIn">
                 <p>2015/电视剧</p>
                 <h2>神犬小七</h2>
@@ -10,8 +10,9 @@
             </div>
             <img  v-attr="src:ml.img" alt="" />
         </div>
+        <div class="swiper-scrollbar"></div>
     </div>
-    <div class="swiper-scrollbar"></div>
+
 </div>
 
 <div id="player" id="myplayer-timeline-timeline">
@@ -30,14 +31,26 @@
         animation-fill-mode: both;
     }
     .movieFlyIn-enter{
-        -webkit-animation: fadeInRight .8s;;
-        animation: fadeInRight .8s;
+        -webkit-animation: fadeInLeft .4s;;
+        animation: fadeInLeft .4s;
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
     }
     .movieInfoIn-leave{
         -webkit-animation: slideOutDown .2s;;
         animation: slideOutDown .2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    .showall-enter{
+        -webkit-animation: fadeIn .8s;;
+        animation: fadeIn .8s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    .showall-leave{
+        -webkit-animation: fadeOut .8s;;
+        animation: fadeOut .8s;
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
     }
@@ -64,7 +77,8 @@
             movieList:[],
             flyIn:false,
             infoshow:false,
-            query:''
+            query:'',
+            showAll:false
         },
         methods:{
             showModal:function(){
@@ -81,7 +95,6 @@
             hideInfoHover:function(ml){
                 clearTimeout(Mtimer);
                 ml.state = false;
-
             }
         }
     });

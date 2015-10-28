@@ -43,10 +43,11 @@
             menu: true,
             lockAnchors: false,
             anchors:['index', 'SourceVideoWorks','Movie','Design','About','JoinUs'],
-            normalScrollElements: '#playvideo, #us, #playvideo, #newsModal, .video-container, .graphicPoster',
+            normalScrollElements: '#playvideo, #us, #playvideo, #newsModal, .video-container, .graphicPoster, .designModal',
             afterLoad: function(anchorLink, index){
                 if(index == 3){
                     playModal.movieList=a;
+                    playModal.showAll = true;
                     swiperVideo.on('mouseover', function(e){
                         console.log(e);
                     })
@@ -71,6 +72,7 @@
                     works.hideW();
                 }
                 if(index == 3){
+                    playModal.showAll = false;
                     $('.graphicPoster').masonry({
                         itemSelector: 'div',
                         columnWidth: 6
