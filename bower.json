@@ -1,0 +1,21 @@
+{
+  "name": "source video",
+  "description": "project created by thinkjs",
+  "main": "index.js",
+  "authors": [
+    "wangwenbo"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/wangwenbo000/source",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vue": "1.0.7"
+  }
+}
