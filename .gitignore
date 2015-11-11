@@ -5,4 +5,4 @@ output/
 output.tar.gz
 sftp-config.json
 www/resource/swf
-.idea
+.idea/

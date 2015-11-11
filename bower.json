@@ -16,6 +16,8 @@
     "tests"
   ],
   "dependencies": {
-    "vue": "1.0.7"
+    "vue": "1.0.7",
+    "jquery": "2.1.4",
+    "swiper": "3.2.0"
   }
 }
