@@ -2,121 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbe6ed0f-28d8-4697-b574-22af1f39df60" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/3dc42df00806de7d8a69305a38a55c4890752fa3/_general.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/d591a9c1cde317ccdc001919146c6f3ec675f171/default.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/17d03613c125918cd0766f51918feb21dc3c074a/_background-clip.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/public/el.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/573835d864b4df5ce94e4258e1e431786e6d4972/_units.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/17d03613c125918cd0766f51918feb21dc3c074a/_border-radius.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/17d03613c125918cd0766f51918feb21dc3c074a/_user-interface.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/instance/state.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/public/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/0fe24dfc41fffed2d6891c797fcd7dee100afa65/_float.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/17d03613c125918cd0766f51918feb21dc3c074a/_inline-block.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/17d03613c125918cd0766f51918feb21dc3c074a/_filter.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/17d03613c125918cd0766f51918feb21dc3c074a/_box-shadow.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/instance/lifecycle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/fragment/fragment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/element/slot.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/d591a9c1cde317ccdc001919146c6f3ec675f171/Screen_5.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/573835d864b4df5ce94e4258e1e431786e6d4972/_lists.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/17d03613c125918cd0766f51918feb21dc3c074a/_regions.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/0fe24dfc41fffed2d6891c797fcd7dee100afa65/_tag-cloud.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/af1a5722249b61fe97c5776f7a26e0902a00f406/_typography.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/element/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/public/bind.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/cd57c9b0980d0f25e92ee54d3ee2a16b903b7e86/_inline-list.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/public/for.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/public/model/radio.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/public/show.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/internal/component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/af1a5722249b61fe97c5776f7a26e0902a00f406/_utilities.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/bbe6e3467eb0788de7c874201395cdc9422f15de/_ellipsis.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/public/model/select.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/0fe24dfc41fffed2d6891c797fcd7dee100afa65/_reset.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/f80149e2d24d84e9c8bc0e2a066a9d62bc1f6d5b/_hover-link.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/d591a9c1cde317ccdc001919146c6f3ec675f171/Screen_3.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/3dc42df00806de7d8a69305a38a55c4890752fa3/_sprites.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/public/if.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/17d03613c125918cd0766f51918feb21dc3c074a/_images.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/d591a9c1cde317ccdc001919146c6f3ec675f171/follow.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/d591a9c1cde317ccdc001919146c6f3ec675f171/menu.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/3dc42df00806de7d8a69305a38a55c4890752fa3/_color.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/d591a9c1cde317ccdc001919146c6f3ec675f171/Screen_4.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/782a0bd87992107041654cec56e572d9555410d7/_grid-background.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/public/model/text.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/internal/class.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/0fe24dfc41fffed2d6891c797fcd7dee100afa65/_min.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/17d03613c125918cd0766f51918feb21dc3c074a/_background-size.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/17d03613c125918cd0766f51918feb21dc3c074a/_hyphenation.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/af1a5722249b61fe97c5776f7a26e0902a00f406/_css3.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/cd57c9b0980d0f25e92ee54d3ee2a16b903b7e86/_horizontal-list.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/d591a9c1cde317ccdc001919146c6f3ec675f171/contact.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/internal/prop.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/public/text.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/17d03613c125918cd0766f51918feb21dc3c074a/_deprecated-support.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/17d03613c125918cd0766f51918feb21dc3c074a/_opacity.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/17d03613c125918cd0766f51918feb21dc3c074a/_columns.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/internal/style.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/17d03613c125918cd0766f51918feb21dc3c074a/_background-origin.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/98a7ed5264178fbd0870c9038118ca3f0a0ab596/_scaffolding.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/public/cloak.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/17d03613c125918cd0766f51918feb21dc3c074a/_transform.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/public/on.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/0fe24dfc41fffed2d6891c797fcd7dee100afa65/_hacks.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/af1a5722249b61fe97c5776f7a26e0902a00f406/_support.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/public/html.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/17d03613c125918cd0766f51918feb21dc3c074a/_animation.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/d591a9c1cde317ccdc001919146c6f3ec675f171/Screen_1.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/0fe24dfc41fffed2d6891c797fcd7dee100afa65/_clearfix.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/public/model/checkbox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/3dc42df00806de7d8a69305a38a55c4890752fa3/_tables.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/bbe6e3467eb0788de7c874201395cdc9422f15de/_nowrap.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/65e4c30c131f260ea88c3e4f2e16dfc2ba547e74/_utilities.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/622f0a367d2abdc892f2af88934fcd5a48a771fe/_contrast.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/17d03613c125918cd0766f51918feb21dc3c074a/_flexbox.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/98a7ed5264178fbd0870c9038118ca3f0a0ab596/_alternating-rows-and-columns.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/d591a9c1cde317ccdc001919146c6f3ec675f171/global.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/573835d864b4df5ce94e4258e1e431786e6d4972/_vertical_rhythm.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/573835d864b4df5ce94e4258e1e431786e6d4972/_text.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/element/partial.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/d591a9c1cde317ccdc001919146c6f3ec675f171/Screen_2.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/internal/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/cd57c9b0980d0f25e92ee54d3ee2a16b903b7e86/_inline-block-list.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/af1a5722249b61fe97c5776f7a26e0902a00f406/_reset.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/573835d864b4df5ce94e4258e1e431786e6d4972/_links.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/internal/transition.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/public/model/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/d591a9c1cde317ccdc001919146c6f3ec675f171/Screen_6.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/cd57c9b0980d0f25e92ee54d3ee2a16b903b7e86/_bullets.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/5a462c574cc9d6048b27e284d2bee463ad06adb0/_sprite-img.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/bbe6e3467eb0788de7c874201395cdc9422f15de/_force-wrap.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/f80149e2d24d84e9c8bc0e2a066a9d62bc1f6d5b/_unstyled-link.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/5a462c574cc9d6048b27e284d2bee463ad06adb0/_base.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/98a7ed5264178fbd0870c9038118ca3f0a0ab596/_borders.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/fragment/factory.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/17d03613c125918cd0766f51918feb21dc3c074a/_font-face.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/17d03613c125918cd0766f51918feb21dc3c074a/_transition.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/5c1730f32298ffd91557b8d52e7146c95c422f95/_compass.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/resource/bower_components/vue/src/directives/public/ref.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/bbe6e3467eb0788de7c874201395cdc9422f15de/_replacement.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/d591a9c1cde317ccdc001919146c6f3ec675f171/news.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/622f0a367d2abdc892f2af88934fcd5a48a771fe/_brightness.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/d591a9c1cde317ccdc001919146c6f3ec675f171/design.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/f80149e2d24d84e9c8bc0e2a066a9d62bc1f6d5b/_link-colors.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/d591a9c1cde317ccdc001919146c6f3ec675f171/playvideo.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/17d03613c125918cd0766f51918feb21dc3c074a/_text-shadow.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/17d03613c125918cd0766f51918feb21dc3c074a/_appearance.scssc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/17d03613c125918cd0766f51918feb21dc3c074a/_box-sizing.scssc" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/source_node_modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/source.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -143,7 +28,7 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14764269">
+            <state vertical-scroll-proportion="0.1383721">
               <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
               <folding />
             </state>
@@ -153,7 +38,7 @@
       <file leaf-file-name="bower.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bower.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.038462">
+            <state vertical-scroll-proportion="0.0">
               <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
@@ -276,6 +161,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -296,7 +182,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -467,16 +352,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="490" y="238" width="1499" height="1176" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.115696885" sideWeight="0.30095923" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23062731" sideWeight="0.5074425" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.115696885" sideWeight="0.31306306" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23062731" sideWeight="0.5074425" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15974729" sideWeight="0.48830187" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.115696885" sideWeight="0.6990408" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.115696885" sideWeight="0.6869369" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18155053" sideWeight="0.502994" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18081181" sideWeight="0.502994" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23020259" sideWeight="0.4925575" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -861,7 +746,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.038462">
+        <state vertical-scroll-proportion="0.0">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
@@ -869,7 +754,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14764269">
+        <state vertical-scroll-proportion="0.1383721">
           <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
           <folding />
         </state>
