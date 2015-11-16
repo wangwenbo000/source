@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/resource/css/bs.min.css" type="text/css">
+    <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+    <script src="/resource/js/vue.min.js"></script>
+    <title></title>
+</head>
+<style>
+    body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #fff;
+        background: url("/resource/img/4.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    .form-signin {
+        max-width: 330px;
+        padding: 15px;
+        margin: 0 auto;
+    }
+    .form-signin-heading {
+        margin: 0 0 15px;
+        font-size: 18px;
+        font-weight: 400;
+        color: #555;
+    }
+    .form-signin .checkbox {
+        margin-bottom: 10px;
+        font-weight: normal;
+    }
+    .form-signin .form-control {
+        position: relative;
+        height: auto;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 10px;
+        font-size: 16px;
+    }
+    .form-signin .form-control:focus {
+        z-index: 2;
+    }
+    .form-signin input[type="username"] {
+        margin-bottom: 10px;
+    }
+    .form-signin input[type="password"] {
+        margin-bottom: 10px;
+    }
+    .card {
+        width: 304px;
+        padding: 20px 25px 30px;
+        margin: 0 auto 25px;
+        background-color: #f7f7f7;
+        background-image: url("/resource/img/SVlogoX.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        border-radius: 2px;
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, .3);
+        box-shadow: 0 2px 2px rgba(0, 0, 0, .3);
+    }
+    .card-signin {
+        width: 288px;
+        margin-top: 30%;
+        padding: 40px 20px 0 20px;
+    }
+    .card-signin .profile-img {
+        display: block;
+        width: 160px;
+        /*height: 96px;*/
+        margin: 0 auto 10px;
+    }
+    .hideInfo{
+        display: none;
+    }
+</style>
+<body>
+<div class="container">
+    <div class="card card-signin">
+        <img class="profile-img" src="/resource/img/logo.png" alt="">
+        <form class="form-signin" method="post" defaultbutton="submit">
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="username" id="inputEmail" class="form-control" placeholder="Email" name="username" autocomplete="off" v-model="username" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" v-model="password" required>
+            <button type="submit" class="btn btn-lg btn-primary btn-block" name="submit" v-on="click:submit" autofocus>Sign in</button>
+        </form>
+        <div class="alert alert-danger hideInfo" role="alert"><i class="glyphicon glyphicon-minus-sign"></i> 用户名或密码不正确</div>
+        <div class="alert alert-success hideInfo" role="alert"><i class="glyphicon glyphicon-ok"></i> 登录成功稍后自动跳转</div>
+    </div>
+</div>
+<script>
+    var loginCheck = new Vue({
+        el: '.form-signin',
+        data: {
+
+        },
+        methods: {
+            submit: function (e) {
+                e.preventDefault();
+                if(this.$data.username==undefined || this.$data.username==''){
+                    return false;
+                }else if(this.$data.password==undefined || this.$data.password==''){
+                    return false;
+                }else{
+                    $.ajax({
+                        url:'/Admin/Login/login',
+                        type:'post',
+                        data:{'username':this.$data.username,'password':this.$data.password},
+                        success:function(data){
+//                        var getrealData = JSON.parse(data);
+                            if(data.errno==0){
+                                $('.alert-success').fadeIn();
+                                setTimeout(function(){
+                                    window.location.href = "/Admin/index";
+                                },1000);
+                            }else{
+                                $('.alert-danger').fadeIn();
+                                loginCheck.$data={};
+                                setTimeout(function(){
+                                    $('.alert-danger').fadeOut();
+                                },2000);
+                            }
+                        }
+                    });
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>
