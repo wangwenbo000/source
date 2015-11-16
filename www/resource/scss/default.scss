@@ -17,7 +17,7 @@ $global_font_color:#c4c4c4;
   user-select: none;
   width: 100%;
   height: 100%;
-  background: $global_bg url("../img/load.gif") no-repeat center;
+  background: $global_bg;// url("../img/load.gif") no-repeat center;
   background-size: 120px;
   position: absolute;
   z-index: 2000;

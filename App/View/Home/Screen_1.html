@@ -15,22 +15,22 @@
   <li class="news_list">
     <p>正在做</p>
     <time>2015/08/28</time>
-    <h2>现在是一篇测试文章</h2>
+    <h2>1</h2>
   </li>
   <li class="news_list">
     <p>正在做</p>
     <time>2015/08/28</time>
-    <h2>现在是一篇测试文章</h2>
+    <h2>2</h2>
   </li>
   <li class="news_list">
     <p>正在做</p>
     <time>2015/08/28</time>
-    <h2>现在是一篇测试文章</h2>
+    <h2>3</h2>
   </li>
   <li class="news_list">
     <p>正在做</p>
     <time>2015/08/28</time>
-    <h2>现在是一篇测试文章</h2>
+    <h2>4</h2>
   </li>
 </ul>
 
@@ -44,10 +44,13 @@ $(document).ready(function() {
     speed:1500,
   });
   var newsList=$('.news_list');
-  newsList.mouseover(function(){
+  newsList.mouseenter(function(){
     console.log($(this).index());
-    mySwiper.slideTo($(this).index(), 1000, false);
+    mySwiper.slideTo($(this).index()+1, 1000, false);
   });
+  newsList.mouseleave(function(){
+    mySwiper.startAutoplay();
+  })
 });
 $('#idnewsMore').click(function(){
   newsModal.show();
