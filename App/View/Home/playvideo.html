@@ -1,11 +1,6 @@
 <div id="playvideo" v-show="showPlayVideoModal" v-transition="showPlayVideoModal" v-cloak>
     <div class="playScroll" >
         <div class="cover" id="youkuplayer">
-
-            <!--<video id="example_video_1" class="cover vjs-default-skin" controls preload="auto" width="1200" height="700" poster="/resource/img/videocover.jpg">-->
-                <!--<source src="/resource/swf/05MLVB01MP4.mp4" type='video/mp4' />-->
-            <!--</video>-->
-
             <img src="/resource/img/videocover.jpg" width="80" alt=""/>
             <div class="logoTag"></div>
             <ul class="playIcon">
@@ -46,8 +41,8 @@
 </div>
 <style>
     .showPlayVideoModal-enter{
-        -webkit-animation: zoomIn .2s;;
-        animation: zoomIn .2s;
+        -webkit-animation: slideInUp .4s;;
+        animation: slideInUp .4s;
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
     }
@@ -75,12 +70,12 @@
         spaceBetween: 0,
         scrollbar:'.stagePhoto-scrollbar',
         scrollbarHide:false,
-        mousewheelControl : true,
+        mousewheelControl : true
     });
     var playVideo = new Vue({
         el:"#playvideo",
         data:{
-            showPlayVideoModal:false,
+            showPlayVideoModal:false
         },
         methods:{
             showModal:function(){
